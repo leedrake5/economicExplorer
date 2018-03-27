@@ -115,7 +115,6 @@ navbarPage("America at a Glance", id="nav",
     DT::dataTableOutput("ziptable")
   ),
 
-column(3,
 tabPanel("Congressional Explorer",
 fluidRow(
 column(3,
@@ -145,6 +144,7 @@ downloadButton(outputId="downloadcongresstable", label="Download"))
 hr(),
 DT::dataTableOutput("congresstable")
 ),
+
 
 
 
