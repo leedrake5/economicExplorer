@@ -116,6 +116,12 @@ navbarPage("America at a Glance", id="nav",
   ),
 
 column(3,
+tabPanel("Congressional Explorer",
+fluidRow(
+column(3,
+selectInput("states", "States", c("All states"="", structure(state.abb, names=state.name), "Washington, DC"="DC"), multiple=TRUE)
+),
+column(3,
 conditionalPanel("input.states",
 selectInput("cities", "Cities", c("All cities"=""), multiple=TRUE)
 )
