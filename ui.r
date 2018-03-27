@@ -59,7 +59,7 @@ navbarPage("America at a Glance", id="nav",
         draggable = TRUE, top = 60, left = "auto", right = 20, bottom = "auto",
         width = 330, height = "auto",
 
-        h2("Congressional Explorer"),
+        h2("Economic Explorer"),
 
         checkboxInput("fullmodel", "Full", value=FALSE),
 
@@ -115,35 +115,6 @@ navbarPage("America at a Glance", id="nav",
     DT::dataTableOutput("ziptable")
   ),
 
-tabPanel("Congressional Explorer",
-fluidRow(
-column(3,
-selectInput("states", "States", c("All states"="", structure(state.abb, names=state.name), "Washington, DC"="DC"), multiple=TRUE)
-),
-column(3,
-conditionalPanel("input.states",
-selectInput("cities", "Cities", c("All cities"=""), multiple=TRUE)
-)
-),
-column(3,
-conditionalPanel("input.states",
-selectInput("districtcodes", "District", c("All Districts"=""), multiple=TRUE)
-)
-)
-),
-fluidRow(
-column(1,
-numericInput("minScore", "Min score", min=0, max=100, value=0)
-),
-column(1,
-numericInput("maxScore", "Max score", min=0, max=100, value=100)
-),
-column(1,
-downloadButton(outputId="downloadcongresstable", label="Download"))
-),
-hr(),
-DT::dataTableOutput("congresstable")
-),
 
 
 

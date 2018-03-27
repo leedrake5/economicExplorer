@@ -72,7 +72,7 @@ function(input, output, session) {
 
     hist(zipsInBounds()$centile,
       breaks = centileBreaks,
-      main = "Political score (visible zips)",
+      main = "SuperZIP (visible zips)",
       xlab = "Percentile",
       xlim = range(allzips$centile),
       col = '#00DD00',
