@@ -1,5 +1,5 @@
 
-#Congressional Impact
+#Economic Impact
 
 
 The early version of the model allows for a geographic display of things like college education, unemployment level, incomes, etc. You can click on a city to get info on which congressfolk are there, alongside ways to contact them.
@@ -12,8 +12,6 @@ Right now biggest needs are:
 
 Thanks for reading this far, and if you have time take a look and let me know your thoughts.
 
-
-You can find the original version here: http://shiny.rstudio.com/gallery/superzip-example.html
 
 You can run this demo with:
 ```
