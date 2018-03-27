@@ -115,7 +115,30 @@ navbarPage("America at a Glance", id="nav",
     DT::dataTableOutput("ziptable")
   ),
 
-
+column(3,
+conditionalPanel("input.states",
+selectInput("cities", "Cities", c("All cities"=""), multiple=TRUE)
+)
+),
+column(3,
+conditionalPanel("input.states",
+selectInput("districtcodes", "District", c("All Districts"=""), multiple=TRUE)
+)
+)
+),
+fluidRow(
+column(1,
+numericInput("minScore", "Min score", min=0, max=100, value=0)
+),
+column(1,
+numericInput("maxScore", "Max score", min=0, max=100, value=100)
+),
+column(1,
+downloadButton(outputId="downloadcongresstable", label="Download"))
+),
+hr(),
+DT::dataTableOutput("congresstable")
+),
 
 
 
